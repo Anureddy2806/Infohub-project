@@ -1,0 +1,45 @@
+{% extends 'users/userbase.html' %}
+{% block contents %}
+<style>
+    .predicted-value-bar {
+        background: linear-gradient(to right, #4caf50, #81c784);
+        border-radius: 25px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        position: relative;
+        margin: 20px 0;
+    }
+
+    .predicted-value {
+        background: #ffffff;
+        color: #f01ce5;
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 10px;
+        text-align: center;
+        border-radius: 25px 0 0 25px;
+    }
+
+    .back-button {
+        background-color: #2587f7;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1em;
+        transition: background-color 0.3s ease;
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    .back-button:hover {
+        background-color: #45a049;
+    }
+</style>
+<br><br><br><br><br><br><br>
+<div class="predicted-value-bar">
+    <div class="predicted-value">Predicted Flight Price:  <span style="color: rgb(32, 4, 136);">₨ {{ predicted_value }}</span>%</div>
+</div>
+
+<a href="javascript:history.back()" class="back-button" style="margin-left: 70px;">Back to Previous</a>
+{% endblock %}
