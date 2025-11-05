@@ -1,0 +1,128 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+/* Reset and base styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-header {
+  background-color: #282c34;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.module-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.module-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.module-card:hover {
+  transform: translateY(-5px);
+}
+
+.module-card h2 {
+  margin-bottom: 0.5rem;
+}
+
+.module-card p {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.module-card button {
+  background-color: #61dafb;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.module-card button:hover {
+  background-color: #21a1f1;
+  color: white;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #eaeaea;
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+.weather {
+  background-color: #e0f7fa;
+}
+.currency {
+  background-color: #fff3e0;
+}
+
+.quote {
+  background-color: #fce4ec;
+}
+.currency {
+  background-color: #fff3e0;
+}
+
+.quote {
+  background-color: #fce4ec;
+}
