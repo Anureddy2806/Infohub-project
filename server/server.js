@@ -5,12 +5,12 @@ const cors = require('cors');
 const axios = require('axios');
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001; // ✅ Dynamic port for Render
 
 app.use(cors());
 app.use(express.json());
 
-
+// ✅ Quote Generator
 const quotes = [
   "Believe you can and you're halfway there.",
   "Success is not final, failure is not fatal.",
@@ -23,7 +23,7 @@ app.get('/api/quote', (req, res) => {
   res.json({ quote: quotes[randomIndex] });
 });
 
-// Weather API (dynamic city support)
+// ✅ Weather API (OpenWeatherMap)
 app.get('/api/weather', async (req, res) => {
   const city = req.query.city || 'London';
   const apiKey = process.env.WEATHER_API_KEY;
@@ -42,7 +42,7 @@ app.get('/api/weather', async (req, res) => {
   }
 });
 
-//  Currency Conversion API
+// ✅ Currency Conversion API (Frankfurter)
 app.get('/api/currency', async (req, res) => {
   const { from = 'USD', to = 'INR', amount = 1 } = req.query;
   const url = `https://api.frankfurter.app/latest?amount=${amount}&from=${from}&to=${to}`;
@@ -56,7 +56,12 @@ app.get('/api/currency', async (req, res) => {
   }
 });
 
-// Start the server
+// ✅ Optional: Health check route
+app.get('/api/ping', (req, res) => {
+  res.send('pong');
+});
+
+// ✅ Start server
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
+  console.log(`🚀 Server running on port ${PORT}`);
 });
