@@ -10,6 +10,11 @@ const PORT = process.env.PORT || 3001; // ✅ Dynamic port for Render
 app.use(cors());
 app.use(express.json());
 
+// ✅ Root route for Render homepage
+app.get('/', (req, res) => {
+  res.send('🌐 InfoHub backend is running! Available routes: /api/weather, /api/currency, /api/quote');
+});
+
 // ✅ Quote Generator
 const quotes = [
   "Believe you can and you're halfway there.",
