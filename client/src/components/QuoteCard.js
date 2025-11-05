@@ -4,7 +4,8 @@ function QuoteCard() {
   const [quote, setQuote] = useState(undefined);
 
   useEffect(() => {
-    const base = process.env.REACT_APP_API_BASE;
+    const base = process.env.REACT_APP_API_URL;
+   
     console.log('✅ API base:', base);
 
     const url = `${base}/api/quote`;
