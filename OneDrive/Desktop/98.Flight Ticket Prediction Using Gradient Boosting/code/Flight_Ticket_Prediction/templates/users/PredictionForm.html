@@ -1,0 +1,124 @@
+{% extends 'users/userbase.html' %}
+
+{% block contents %}
+<div class="container mt-5">
+    <h1>{{ msg }}</h1>
+    <h1>AirFare Data Form</h1>
+    <form action="" method="POST" class="mt-4">
+    
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="Airline" class="form-label">Airline:</label>
+            <select class="form-select" id="Airline" name="Airline" required>
+                <option value="IndiGo">IndiGo</option>
+                <option value="Jet Airways">Jet Airways</option>
+                <option value="Air India">Air India</option>
+                <option value="Multiple carriers">Multiple carriers</option>
+                <option value="SpiceJet">SpiceJet</option>
+                <option value="Air Asia">Air Asia</option>
+                <option value="GoAir">GoAir </option>
+                <option value="Multiple carriers Premium economy">Multiple carriers Premium economy</option>
+                <option value="Jet Airways Business">Jet Airways Business</option>
+                <option value="Vistara Premium economy">Vistara Premium economy </option>
+                <option value="Trujet">Trujet</option>
+                <option value="Vistara">Vistara</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="journey_day">Journey Day:</label>
+            <input type="number" name="journey_day" required>
+        </div>
+
+        <div>
+            <label for="journey_month">Journey Month:</label>
+            <input type="number" name="journey_month" required><br>
+        </div>
+
+        <div>
+            <label for="journey_year">Journey Year:</label>
+            <input type="number" name="journey_year" required><br>
+        </div>
+
+        <div class="mb-3">
+            <label for="Source" class="form-label">Source:</label>
+            <select class="form-select" id="Source" name="Source" required>
+                <option value="Delhi">Delhi</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Banglore">Banglore</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Chennai">Chennai</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="Destination" class="form-label">Destination:</label>
+            <select class="form-select" id="Destination" name="Destination" required>
+                <option value="Cochin">Cochin</option>
+                <option value="Banglore">Banglore</option>
+                <option value="Delhi">Delhi</option>
+                <option value="New Delhi">New Delhi</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Kolkata">Kolkata</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="Route_1">Route 1:</label>
+            <input type="text" name="Route_1" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="Route_2">Route 2:</label>
+            <input type="text" name="Route_2" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="Route_3">Route 3:</label>
+            <input type="text" name="Route_3" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="Route_4">Route 4:</label>
+            <input type="text" name="Route_4" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="dep_time_hour">Departure Time Hour:</label>
+            <input type="number" name="dep_time_hour" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="dep_time_min">Departure Time Minute:</label>
+            <input type="number" name="dep_time_min" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="Arrival_Time_hour">Arrival Time Hour:</label>
+            <input type="number" name="Arrival_Time_hour" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="Arrival_Time_minute">Arrival Time Minute:</label>
+            <input type="number" name="Arrival_Time_minute" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="Duration_hours">Duration Hours:</label>
+            <input type="number" name="Duration_hours" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="Duration_minutes">Duration Minutes:</label>
+            <input type="number" name="Duration_minutes" required><br>
+        </div>
+
+        <div class="mb-3">
+            <label for="Total_Stops" class="form-label">Total Stops:</label>
+            <input type="number" class="form-control" id="Total_Stops" name="Total_Stops" required>
+        </div>
+            </select>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}

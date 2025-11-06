@@ -1,0 +1,6 @@
+node_modules/
+.p2/
+.rustup/
+*.dll
+*.exe
+*.zip
